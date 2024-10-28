@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# quaxnat
+# quaxnat <a href="https://github.com/MaximilianAxer/quaxnat/"><img src="man/figures/logo.png" align="right" height="139" /></a>
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -41,9 +41,15 @@ Additional kernels can be provided as user-defined functions.
 
 ## Installation
 
-The *quaxnat* package is available on
-[Github](https://github.com/MaximilianAxer/quaxnat). To install the
-development version, run the following code:
+The stable version can be installed from
+[CRAN](https://CRAN.R-project.org/package=quaxnat)
+
+``` r
+install.packages("quaxnat")
+```
+
+and the development version is available from
+[Github](https://github.com/MaximilianAxer/quaxnat)
 
 ``` r
 remotes::install_github("MaximilianAxer/quaxnat")
@@ -119,6 +125,7 @@ the parameterized `quax` object is used for the prediction.
 
 ``` r
 # Create raster data set as prediction area
+set.seed(20240606)
 rr <- terra::rast(matrix(sample(0:10, 20 * 20, replace = TRUE), nrow = 20, ncol = 20))
 
 # Compute distances to seed trees for prediction area
